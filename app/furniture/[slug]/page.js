@@ -1,20 +1,14 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { data } from "@/app/data/data";
-import { livingroomdata } from "@/app/data/data";
 import Link from "next/link";
 import Image from "next/image";
+import { findFurnitureBySlug } from "@/utils/findFurniture";
 
 export default function FurnitureCategoryPage({ params }) {
-  const furnitureData = data.find((f) => {
-    console.log(f);
-    // console.log(params.product);
-    console.log(f.slug);
-    console.log(params.slug);
-
-    return f.slug.toString().trim() === params.slug.toString().trim();
-  });
+  
+  const furnitureData = findFurnitureBySlug(params.slug);
 
   return (
     <div>
@@ -22,7 +16,7 @@ export default function FurnitureCategoryPage({ params }) {
       <div className="flex flex-wrap gap-5 p-5 justify-start">
         {furnitureData.category.map((item) => {
           return (
-            <div className="flex  flex-col mt-[40px] ">
+            <div className="flex  flex-col mt-[40px]" key={item.id}>
               <Link href={`furniture/${params.slug}/${item.slug}`}>
                 <div className="flex " key={item.id}>
                   <Image
