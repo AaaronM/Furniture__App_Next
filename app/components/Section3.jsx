@@ -15,7 +15,7 @@ export default function Section3() {
   const { scrollYProgress } = useScroll();
   const x = useTransform(scrollYProgress, [0, 1], [0, 900]);
   return (
-    <div className=" translate-y-[-300px]">
+    <div className=" translate-y-[-400px]">
       <h2 className=" text-center uppercase text-[40px] mb-5 text-dark/80 font-primary translate-y-[200px]">
         designs
       </h2>

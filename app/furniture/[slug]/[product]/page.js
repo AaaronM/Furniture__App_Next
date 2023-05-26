@@ -6,6 +6,12 @@ import { findFurnitureProduct } from "@/utils/findFurniture";
 
 export default function ItemsPage({ params }) {
   const product = findFurnitureProduct(params.slug, params.product);
+  let cart = [];
+
+  function addToCard() {
+    cart.push(product);
+    console.log(cart);
+  }
 
   return (
     <div className="pt-[220px] ">
@@ -42,7 +48,10 @@ export default function ItemsPage({ params }) {
             {product.careinstructions}
           </p>
           <div className="text-center justify-center items-center mt-2 ">
-            <button className=" font-bold uppercase text-slate-100 bg-gray-900 w-full p-2 ">
+            <button
+              className=" font-bold uppercase bg-dark text-light bg-gray-900 w-full p-2 "
+              onClick={addToCard}
+            >
               Add to cart
             </button>
           </div>

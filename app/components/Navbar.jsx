@@ -61,7 +61,16 @@ export default function Navbar() {
               </li>
 
               <li className=" hover:text-gold  hover:font-normal  transition-all hover:translate-y-[-5px]">
-                SHOWROOM
+                <Link
+                  href="showroom"
+                  className={
+                    colorChange
+                      ? " text-dark z-50  hover:text-gold  hover:font-normal no-underline   "
+                      : " text-dark  z-50  border-none  hover:text-gold  hover:font-normal no-underline "
+                  }
+                >
+                  SHOWROOM
+                </Link>
               </li>
             </ul>
           </div>
