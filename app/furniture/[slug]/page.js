@@ -7,13 +7,13 @@ import Image from "next/image";
 import { findFurnitureBySlug } from "@/utils/findFurniture";
 
 export default function FurnitureCategoryPage({ params }) {
-  
   const furnitureData = findFurnitureBySlug(params.slug);
 
   return (
     <div>
       {/* <h1>{furnitureData.name}</h1> */}
-      <div className="flex flex-wrap gap-5 p-5 justify-start">
+      <div className="flex flex-wrap justify-start gap-[15px] pt-[150px] p-5   ">
+        {/* flex flex-wrap gap-5 p-5 justify-start  */}
         {furnitureData.category.map((item) => {
           return (
             <div className="flex  flex-col mt-[40px]" key={item.id}>

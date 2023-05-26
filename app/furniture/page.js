@@ -6,8 +6,7 @@ import Image from "next/image";
 
 export default function FurnitureCategoriesPage() {
   return (
-    <div className="flex flex-wrap justify-evenly gap-[15px] pt-[150px] ">
-      <p className="text-[70px]">FURNITURE CATEGORY PAGE</p>
+    <div className="flex flex-wrap justify-evenly gap-[15px] pt-[150px] p-5 ">
       {data.map((type) => {
         return (
           <div className="flex  flex-col mt-[40px] " key={type.id}>
