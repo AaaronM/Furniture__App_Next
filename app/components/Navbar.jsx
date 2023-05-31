@@ -37,7 +37,7 @@ export default function Navbar() {
             className={
               colorChange
                 ? " text-dark z-50  hover:text-dark  hover:font-normal no-underline text-[45px] font-thin transition-all   "
-                : " text-dark  z-50  border-none  hover:text-gold  hover:font-normal no-underline text-[45px] font-thin transition-all   "
+                : " text-dark  z-50  border-none  hover:text-dark  hover:font-normal no-underline text-[45px] font-thin transition-all   "
             }
           >
             CONCEPTS
@@ -49,24 +49,33 @@ export default function Navbar() {
                   href="furniture"
                   className={
                     colorChange
-                      ? " text-dark z-50  hover:text-gold  hover:font-normal no-underline   "
-                      : " text-dark  z-50  border-none  hover:text-gold  hover:font-normal no-underline "
+                      ? " text-dark z-50  hover:text-dark  hover:font-normal no-underline   "
+                      : " text-dark  z-50  border-none  hover:text-dark  hover:font-normal no-underline "
                   }
                 >
                   SHOP
                 </Link>
               </li>
-              <li className=" hover:text-gold  hover:font-normal  transition-all hover:translate-y-[-5px]">
-                SALE
+              <li className=" transition-all hover:translate-y-[-5px] border-none  ">
+                <Link
+                  href="sale"
+                  className={
+                    colorChange
+                      ? " text-dark z-50  hover:text-dark  hover:font-normal no-underline   "
+                      : " text-dark  z-50  border-none  hover:text-dark  hover:font-normal no-underline "
+                  }
+                >
+                  SALE
+                </Link>
               </li>
 
-              <li className=" hover:text-gold  hover:font-normal  transition-all hover:translate-y-[-5px]">
+              <li className=" hover:text-dark  hover:font-normal  transition-all hover:translate-y-[-5px]">
                 <Link
                   href="showroom"
                   className={
                     colorChange
-                      ? " text-dark z-50  hover:text-gold  hover:font-normal no-underline   "
-                      : " text-dark  z-50  border-none  hover:text-gold  hover:font-normal no-underline "
+                      ? " text-dark z-50  hover:text-dark  hover:font-normal no-underline   "
+                      : " text-dark  z-50  border-none  hover:text-dark  hover:font-normal no-underline "
                   }
                 >
                   SHOWROOM
