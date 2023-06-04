@@ -1,11 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { findFurnitureProduct } from "@/utils/findFurniture";
+import { CartContext } from "@/app/context/cartContext";
 
 export default function ItemsPage({ params }) {
   const product = findFurnitureProduct(params.slug, params.product);
+  const { cartItems, addItem } = useContext(CartContext);
+
   let cart = [];
 
   function addToCard() {
@@ -15,7 +18,7 @@ export default function ItemsPage({ params }) {
 
   return (
     <div className="pt-[220px] ">
-      <div className="flex  justify-center gap-[100px] ">
+      <div className="flex justify-center gap-[100px] ">
         <div className="p-5">
           <Image
             src={product.image}
@@ -50,7 +53,7 @@ export default function ItemsPage({ params }) {
           <div className="text-center justify-center items-center mt-2 ">
             <button
               className=" font-bold uppercase bg-dark text-light bg-gray-900 w-full p-2 "
-              onClick={addToCard}
+              onClick={() => addItem(product)}
             >
               Add to cart
             </button>

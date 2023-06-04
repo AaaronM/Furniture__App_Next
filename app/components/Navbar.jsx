@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav
       className={
         colorChange
-          ? " p-5 bg-transparent  fixed  w-full   font-light text-dark z-[999]  "
+          ? " p-5 bg-transparent  fixed  w-full   font-light text-dark z-[999] "
           : " p-5 bg-transparent  fixed  w-full   font-light text-dark  z-[999]"
       }
     >
@@ -87,7 +87,9 @@ export default function Navbar() {
         <div className="flex gap-5 justify-center items-center mt-[-50px]">
           <p>USA</p>
           <p>ICON</p>
-          <CiShoppingCart className=" text-[25px]   " />
+          <Link href="/cart">
+            <CiShoppingCart className=" text-[25px]" />
+          </Link>
         </div>
       </div>
     </nav>
